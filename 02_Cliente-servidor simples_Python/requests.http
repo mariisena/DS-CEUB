@@ -1,0 +1,37 @@
+@base = http://127.0.0.1:5000
+@json = Content-Type: application/json
+
+### Saúde/raiz
+GET {{base}}/
+
+### Lista (sem filtros)
+GET {{base}}/personagens/
+
+### Lista (filtro + paginação)
+GET {{base}}/personagens/?universo=Naruto&limit=2&offset=0
+
+### Obter por ID
+GET {{base}}/personagens/2
+
+### Criar
+POST {{base}}/personagens/
+{{json}}
+
+{
+  "nome": "Satoru Gojo",
+  "universo": "Jujutsu Kaisen",
+  "poder_principal": "Infinito"
+}
+
+### Atualizar (PUT)
+PUT {{base}}/personagens/6
+{{json}}
+
+{
+  "nome": "Satoru Gojo",
+  "universo": "Jujutsu Kaisen",
+  "poder_principal": "Ilimitado"
+}
+
+### Remover
+DELETE {{base}}/personagens/6

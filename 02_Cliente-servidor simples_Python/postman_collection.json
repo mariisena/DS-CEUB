@@ -1,0 +1,106 @@
+{
+    "info": {
+        "name": "API Personagens",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Saúde",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/"
+            }
+        },
+        {
+            "name": "Listar personagens",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/personagens/"
+            }
+        },
+        {
+            "name": "Lista (filtro + paginação)",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{baseUrl}}/personagens/?universo=Naruto&limit=2&offset=0",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "personagens",
+                        ""
+                    ],
+                    "query": [
+                        {
+                            "key": "universo",
+                            "value": "Naruto"
+                        },
+                        {
+                            "key": "limit",
+                            "value": "2"
+                        },
+                        {
+                            "key": "offset",
+                            "value": "0"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Obter por ID",
+            "request": {
+                "method": "GET",
+                "url": "{{baseUrl}}/personagens/2"
+            }
+        },
+        {
+            "name": "Criar",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nome\": \"Edward Elric\",\n  \"universo\": \"Fullmetal Alchemist\",\n  \"poder_principal\": \"Alquimia\"\n}"
+                },
+                "url": "{{baseUrl}}/personagens/"
+            }
+        },
+        {
+            "name": "Atualizar (PUT)",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nome\": \"Edward Elric\",\n  \"universo\": \"Fullmetal Alchemist\",\n  \"poder_principal\": \"Alquimia Avançada\"\n}"
+                },
+                "url": "{{baseUrl}}/personagens/6"
+            }
+        },
+        {
+            "name": "Remover",
+            "request": {
+                "method": "DELETE",
+                "url": "{{baseUrl}}/personagens/6"
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://127.0.0.1:5000"
+        }
+    ]
+}

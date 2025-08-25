@@ -1,0 +1,23 @@
+@base = http://localhost:5066
+
+### Lista (sem filtros)
+GET {{base}}/personagens
+
+### Lista filtrando por universo
+GET {{base}}/personagens?universo=Naruto&limit=5&offset=0
+
+### Buscar por ID (existente)
+GET {{base}}/personagens/3
+
+### Buscar por ID (não existente)
+GET {{base}}/personagens/999
+
+### Criar novo
+POST {{base}}/personagens
+Content-Type: application/json
+
+{
+  "nome": "Nezuko Tanjiro",
+  "universo": "Kimetsu no Yaiba",
+  "poderPrincipal": "Arte Demoníaca de Sangue"
+}

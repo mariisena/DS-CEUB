@@ -1,6 +1,35 @@
-@APIEncap_HostAddress = http://localhost:5134
+@base = http://localhost:5134
 
-GET {{APIEncap_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1) Criar conta
+POST {{base}}/contas
+Content-Type: application/json
 
-###
+{
+    "titular": "Mari",
+    "numeroConta": "0001-9",
+    "depositoInicial": 100
+}
+
+### 2) Listar contas
+GET {{base}}/contas
+
+### 3) Buscar por Id
+GET {{base}}/contas/8
+
+### 4) Depositar
+POST {{base}}/contas/8/depositar
+Content-Type: application/json
+
+{ "valor": 50 }
+
+### 5) Sacar (ok)
+POST {{base}}/contas/8/sacar
+Content-Type: application/json
+
+{ "valor": 30 }
+
+### 6) Sacar (erro — saldo insuficiente)
+POST {{base}}/contas/8/sacar
+Content-Type: application/json
+
+{ "valor": 150 }

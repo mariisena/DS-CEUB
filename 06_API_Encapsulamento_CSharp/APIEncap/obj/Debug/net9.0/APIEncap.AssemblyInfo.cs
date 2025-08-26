@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIEncap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+702446552e2074efeebb75160d9c9227178d84f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2382968e7594a71c30fde8bb0a08bc2ebbe957bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIEncap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIEncap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

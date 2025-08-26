@@ -88,7 +88,7 @@ Exemplo de body JSON para criação:
 
 **2. VS Code REST Client:**
 
-Arquivo ``APIOOP.http`` com requests:
+Arquivo ``APIOOPpersonagens.http`` com requests:
 
 ```http
 @base = http://localhost:5275

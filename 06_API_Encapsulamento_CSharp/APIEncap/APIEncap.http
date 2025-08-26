@@ -1,0 +1,6 @@
+@APIEncap_HostAddress = http://localhost:5134
+
+GET {{APIEncap_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

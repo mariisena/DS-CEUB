@@ -1,0 +1,32 @@
+@base = http://localhost:5275
+
+### 1) Listar todos
+GET {{base}}/personagens
+
+
+### 2) Filtrar por classe (ex.: Ninja | Pirata | Shinigami)
+GET {{base}}/personagens?classe=Ninja
+
+
+### 3) Buscar por Id (existente)
+GET {{base}}/personagens/1
+
+
+### 4) Buscar por Id (não existente)
+GET {{base}}/personagens/999
+
+
+### 5) Criar (Tipo define a subclasse; Atributo = técnica/haki/zanpakuto)
+POST {{base}}/personagens
+Content-Type: application/json
+
+{
+    "tipo": "ninja",
+    "nome": "Kakashi",
+    "universo": "Naruto",
+    "atributo": "Chidori"
+}
+
+### 6) Polimorfismo em ação — atacar
+# Use um Id válido (de um seed ou do criado no POST)
+GET {{base}}/personagens/1/ataque

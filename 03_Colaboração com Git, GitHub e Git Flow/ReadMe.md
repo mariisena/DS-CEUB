@@ -1,4 +1,4 @@
-# 📌 Atividade 3 – Desenvolvimento de Sistemas
+# 📌 Atividade 3 –  Colaboração com Git/GitHub e Git Flow
 
 Repositório criado para a **Atividade nº 3** da disciplina **Desenvolvimento de Sistemas** (UniCEUB).
 
@@ -25,12 +25,6 @@ Repositório criado para a **Atividade nº 3** da disciplina **Desenvolvimento d
 6. Finalizar feature com Git Flow → merge em `develop`.  
 7. (Opcional) Criar release/tag `v1.0.0`.  
 8. (Bônus) Criar Issue e vinculá-la a uma PR.  
-
-## 🚀 Status
-
-Finalizado ✅ – prints e evidências serão adicionados no relatório em PDF.
-
----
 
 ✍️ **Aluno(a): Mariana Sena**  
 📖 Ciência da Computação – 3º semestre – UniCEUB

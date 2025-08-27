@@ -1,0 +1,54 @@
+### Base
+@baseUrl = http://127.0.0.1:8000
+
+### Healthcheck
+GET {{baseUrl}}/
+
+### Listar personagens (vazio no início)
+GET {{baseUrl}}/characters
+
+### Criar Wizard
+POST {{baseUrl}}/characters
+Content-Type: application/json
+
+{
+  "type": "wizard",
+  "name": "Gandalf",
+  "universe": "Middle-earth",
+  "spell": "You shall not pass"
+}
+
+### Criar Ninja
+POST {{baseUrl}}/characters
+Content-Type: application/json
+
+{
+  "type": "ninja",
+  "name": "Kakashi",
+  "universe": "Naruto",
+  "technique": "Chidori"
+}
+
+### Listar novamente
+GET {{baseUrl}}/characters
+
+### Obter por ID (ex: 1)
+GET {{baseUrl}}/characters/1
+
+### Polimorfismo: falar (wizard/ninja respondem diferente)
+GET {{baseUrl}}/characters/1/speak
+
+### Polimorfismo: falar (wizard/ninja respondem diferente)
+GET {{baseUrl}}/characters/2/speak
+
+### Filtrar por tipo
+GET {{baseUrl}}/characters/type/wizard
+
+### Filtrar por tipo
+GET {{baseUrl}}/characters/type/ninja
+
+### Remover por ID (ex: 2)
+DELETE {{baseUrl}}/characters/2
+
+### Conferir após remoção
+GET {{baseUrl}}/characters
